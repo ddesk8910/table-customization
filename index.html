@@ -4,31 +4,132 @@
   <link rel="stylesheet" href="css/reset.css" />
 </head>
 <body>
-  <div class="title">
-    <h1>和モダンテーブルカスタマイズ</h1>
-  </div>
-  <div class="img-container">
-    <img src="imgs/150-R-BS_off.jpg" />
-  </div>
-  <div class="panel-btn-cotnainer">
-    <h2>パネルの太さ</h2>
-    <input type="radio" name="thickness" value="250" checked>250mm
-    <input type="radio" name="thickness" value="200">200mm
-    <input type="radio" name="thickness" value="250">150mm
-  </div>
-  <div class="panel-btn-cotnainer">
-    <h2>模様の細かさ</h2>
-    <input type="radio" name="fineness" value="D">細い
-    <input type="radio" name="fineness" value="R">太い
-  </div>
-  <div class="panel-btn-cotnainer">
-    <h2>パネルの色</h2>
-    <input type="radio" name="color" value="250">ブラック
-    <input type="radio" name="color" value="200">バンピーシルバー
-  </div>
-  <div class="panel-btn-cotnainer">
-    <h2>ライト</h2>
-    <input type="radio" name="fineness" value="D">細かい
-    <input type="radio" name="fineness" value="R">粗い
-  </div>
+  <section id="page">
+    <div class="title">
+      <h1>和モダンテーブルカスタマイズ</h1>
+    </div>
+    <div class="img-container">
+      <img id="table-image" src="imgs/250-R-BL_off.jpg" />
+    </div>
+    <div class="panel-btn-container">
+      <h2>パネルの太さ</h2>
+      <input
+        type="radio"
+        name="thickness"
+        value="250"
+        onchange="valueChanged(name)"
+        checked
+      />250mm
+      <input
+        type="radio"
+        name="thickness"
+        value="200"
+        onchange="valueChanged(name)"
+      />200mm
+      <input
+        type="radio"
+        name="thickness"
+        value="150"
+        onchange="valueChanged(name)"
+      />150mm
+    </div>
+    <div class="panel-btn-container">
+      <h2>模様の細かさ</h2>
+      <input
+        type="radio"
+        name="fineness"
+        value="D"
+        onchange="valueChanged(name)"
+      />細かい
+      <input
+        type="radio"
+        name="fineness"
+        value="R"
+        onchange="valueChanged(name)"
+        checked
+      />粗い
+    </div>
+    <div class="panel-btn-container">
+      <h2>パネルの色</h2>
+      <input
+        type="radio"
+        name="color"
+        value="BL"
+        onchange="valueChanged('color')"
+        checked
+      />ブラック
+      <input
+        type="radio"
+        name="color"
+        value="BS"
+        onchange="valueChanged('color')"
+      />バンピーシルバー
+    </div>
+    <div class="panel-btn-container">
+      <h2>ライト</h2>
+      <input
+        type="radio"
+        name="light"
+        value="on"
+        onchange="valueChanged('light')"
+      />オン
+      <input
+        type="radio"
+        name="light"
+        value="off"
+        onchange="valueChanged('light')"
+        checked
+      />オフ
+    </div>
+  </section>
 </body>
+<script>
+  const image = document.getElementById("table-image");
+  let thicknessBtn = document.getElementsByName("thickness");
+  let finenessBtn = document.getElementsByName("fineness");
+  let colorBtn = document.getElementsByName("color");
+  let lightBtn = document.getElementsByName("light");
+
+  let thicknessValue = "250";
+  let finenessValue = "R";
+  let colorValue = "BL";
+  let lightValue = "off";
+
+  let url = "imgs/250-R-BL_off.jpg";
+
+  function valueChanged(name) {
+    searchedProperty = document.getElementsByName(name);
+    for (let i = 0; i < searchedProperty.length; i++) {
+      if (searchedProperty.item(i).checked) {
+        switch (name) {
+          case "thickness":
+            thicknessValue = searchedProperty.item(i).value;
+            break;
+          case "fineness":
+            finenessValue = searchedProperty.item(i).value;
+            break;
+          case "color":
+            colorValue = searchedProperty.item(i).value;
+            break;
+          case "light":
+            lightValue = searchedProperty.item(i).value;
+            break;
+          default:
+            console.log("ouch!");
+            break;
+        }
+      }
+    }
+    url =
+      "imgs/" +
+      thicknessValue +
+      "-" +
+      finenessValue +
+      "-" +
+      colorValue +
+      "_" +
+      lightValue +
+      ".jpg";
+    image.src = url;
+  }
+</script>

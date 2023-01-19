@@ -1,8 +1,20 @@
+#page{
+    width: 1000px;
+    margin: 0 auto;
+}
+
 .img-container{
     width: 100%;
-    text-align: center;
 }
 
 .img-container img{
-    width: 50%;
+    width: 100%;
+}
+
+.title h1{
+    margin:16px auto 16px 20px;
+}
+
+#page .panel-btn-container{
+    margin-bottom: 20px;
 }
