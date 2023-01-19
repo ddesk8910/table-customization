@@ -6,9 +6,7 @@
 <body>
   <section id="page">
     <div class="page-container-flex">
-      <div class="left">
-        
-      </div>
+      <div class="left"></div>
       <div class="center">
         <div class="title">
           <h1>和モダンテーブルカスタマイズ</h1>
@@ -21,72 +19,85 @@
         <div class="panel-btn-container">
           <h2>パネルの太さ</h2>
           <input
+            id="thickness-1"
             type="radio"
             name="thickness"
             value="250"
             onchange="valueChanged(name)"
             checked
-          />250mm
+          />
+          <label for="thickness-1">250mm</label>
           <input
+            id="thickness-2"
             type="radio"
             name="thickness"
             value="200"
             onchange="valueChanged(name)"
-          />200mm
+          />
+          <label for="thickness-2">200mm</label>
           <input
+            id="thickness-3"
             type="radio"
             name="thickness"
             value="150"
             onchange="valueChanged(name)"
-          />150mm
+          />
+          <label for="thickness-3">150mm</label>
         </div>
+
         <div class="panel-btn-container">
           <h2>模様の細かさ</h2>
           <input
+            id="fineness-1"
             type="radio"
             name="fineness"
             value="D"
             onchange="valueChanged(name)"
-          />細かい
+          /><label for="fineness-1">細かい</label>
           <input
+            id="fineness-2"
             type="radio"
             name="fineness"
             value="R"
             onchange="valueChanged(name)"
             checked
-          />粗い
+          /><label for="fineness-2">粗い</label>
         </div>
         <div class="panel-btn-container">
           <h2>パネルの色</h2>
           <input
+            id="color-1"
             type="radio"
             name="color"
             value="BL"
             onchange="valueChanged('color')"
             checked
-          />ブラック
+          /><label for="color-1">ブラック</label>
           <input
+            id="color-2"
             type="radio"
             name="color"
             value="BS"
             onchange="valueChanged('color')"
-          />バンピーシルバー
+          /><label for="color-2">バンピーシルバー</label>
         </div>
         <div class="panel-btn-container">
           <h2>ライト</h2>
           <input
+            id="light-1"
             type="radio"
             name="light"
             value="on"
             onchange="valueChanged('light')"
-          />オン
+          /><label for="light-q">オン</label>
           <input
+            di="light-2"
             type="radio"
             name="light"
             value="off"
             onchange="valueChanged('light')"
             checked
-          />オフ
+          /><label for="light-2">オフ</label>
         </div>
       </div>
     </div>
