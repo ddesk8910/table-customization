@@ -1,0 +1,48 @@
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p,
+a, address, img,
+small, button, dt, dd, ol, ul, li, form, label, legend,
+table, tbody, thead, tr, th, td,
+article, footer, header, section, summary,
+time, video, input {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'M PLUS 1p', sans-serif, 'Noto Sans JP','游ゴシック','Yu Gothic','Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3',Meiryo,メイリオ,Osaka,'MS PGothic', arial, helvetica,sans-serif;
+    font-size:15px;
+    vertical-align: baseline;
+    font-display: swap;
+    text-decoration: none;
+    font-style:normal;
+}
+
+body{
+    overflow-x: hidden;
+    margin: 0;
+}
+
+footer, header, .section {
+    display: block;
+}
+
+ol, ul{
+    list-style: none;
+}
+
+span{
+    font-size:inherit;
+}
+
+a{
+    color: inherit;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+button{
+    background-color: inherit;
+}
