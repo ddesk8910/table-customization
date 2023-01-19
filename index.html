@@ -5,81 +5,90 @@
 </head>
 <body>
   <section id="page">
-    <div class="title">
-      <h1>和モダンテーブルカスタマイズ</h1>
-    </div>
-    <div class="img-container">
-      <img id="table-image" src="imgs/250-R-BL_off.jpg" />
-    </div>
-    <div class="panel-btn-container">
-      <h2>パネルの太さ</h2>
-      <input
-        type="radio"
-        name="thickness"
-        value="250"
-        onchange="valueChanged(name)"
-        checked
-      />250mm
-      <input
-        type="radio"
-        name="thickness"
-        value="200"
-        onchange="valueChanged(name)"
-      />200mm
-      <input
-        type="radio"
-        name="thickness"
-        value="150"
-        onchange="valueChanged(name)"
-      />150mm
-    </div>
-    <div class="panel-btn-container">
-      <h2>模様の細かさ</h2>
-      <input
-        type="radio"
-        name="fineness"
-        value="D"
-        onchange="valueChanged(name)"
-      />細かい
-      <input
-        type="radio"
-        name="fineness"
-        value="R"
-        onchange="valueChanged(name)"
-        checked
-      />粗い
-    </div>
-    <div class="panel-btn-container">
-      <h2>パネルの色</h2>
-      <input
-        type="radio"
-        name="color"
-        value="BL"
-        onchange="valueChanged('color')"
-        checked
-      />ブラック
-      <input
-        type="radio"
-        name="color"
-        value="BS"
-        onchange="valueChanged('color')"
-      />バンピーシルバー
-    </div>
-    <div class="panel-btn-container">
-      <h2>ライト</h2>
-      <input
-        type="radio"
-        name="light"
-        value="on"
-        onchange="valueChanged('light')"
-      />オン
-      <input
-        type="radio"
-        name="light"
-        value="off"
-        onchange="valueChanged('light')"
-        checked
-      />オフ
+    <div class="page-container-flex">
+      <div class="left">
+        
+      </div>
+      <div class="center">
+        <div class="title">
+          <h1>和モダンテーブルカスタマイズ</h1>
+        </div>
+        <div class="img-container">
+          <img id="table-image" src="imgs/250-R-BL_off.jpg" />
+        </div>
+      </div>
+      <div class="right">
+        <div class="panel-btn-container">
+          <h2>パネルの太さ</h2>
+          <input
+            type="radio"
+            name="thickness"
+            value="250"
+            onchange="valueChanged(name)"
+            checked
+          />250mm
+          <input
+            type="radio"
+            name="thickness"
+            value="200"
+            onchange="valueChanged(name)"
+          />200mm
+          <input
+            type="radio"
+            name="thickness"
+            value="150"
+            onchange="valueChanged(name)"
+          />150mm
+        </div>
+        <div class="panel-btn-container">
+          <h2>模様の細かさ</h2>
+          <input
+            type="radio"
+            name="fineness"
+            value="D"
+            onchange="valueChanged(name)"
+          />細かい
+          <input
+            type="radio"
+            name="fineness"
+            value="R"
+            onchange="valueChanged(name)"
+            checked
+          />粗い
+        </div>
+        <div class="panel-btn-container">
+          <h2>パネルの色</h2>
+          <input
+            type="radio"
+            name="color"
+            value="BL"
+            onchange="valueChanged('color')"
+            checked
+          />ブラック
+          <input
+            type="radio"
+            name="color"
+            value="BS"
+            onchange="valueChanged('color')"
+          />バンピーシルバー
+        </div>
+        <div class="panel-btn-container">
+          <h2>ライト</h2>
+          <input
+            type="radio"
+            name="light"
+            value="on"
+            onchange="valueChanged('light')"
+          />オン
+          <input
+            type="radio"
+            name="light"
+            value="off"
+            onchange="valueChanged('light')"
+            checked
+          />オフ
+        </div>
+      </div>
     </div>
   </section>
 </body>
