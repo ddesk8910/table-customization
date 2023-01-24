@@ -12,7 +12,7 @@
           <h1>和モダンテーブルカスタマイズ</h1>
         </div>
         <div class="img-container">
-          <img id="table-image" src="imgs/250-R-BL_off.jpg" />
+          <img id="table-image" src="imgs/MWL-W250-A-BL_off.jpg" />
         </div>
       </div>
       <div class="right">
@@ -44,24 +44,98 @@
           />
           <label for="thickness-3">150mm</label>
         </div>
-
         <div class="panel-btn-container">
-          <h2>模様の細かさ</h2>
+          <h2>模様の種類</h2>
           <input
-            id="fineness-1"
+            id="panel-1"
             type="radio"
-            name="fineness"
-            value="D"
-            onchange="valueChanged(name)"
-          /><label for="fineness-1">細かい</label>
-          <input
-            id="fineness-2"
-            type="radio"
-            name="fineness"
-            value="R"
+            name="panel"
+            value="A"
             onchange="valueChanged(name)"
             checked
-          /><label for="fineness-2">粗い</label>
+          />
+          <label for="panel-1">麻の葉</label>
+          <input
+            id="panel-2"
+            type="radio"
+            name="panel"
+            value="B"
+            onchange="valueChanged(name)"
+            checked
+          />
+          <label for="panel-2">青海波</label>
+          <input
+            id="panel-3"
+            type="radio"
+            name="panel"
+            value="C"
+            onchange="valueChanged(name)"
+            checked
+          />
+          <label for="panel-3">胡麻</label>
+          <input
+            id="panel-4"
+            type="radio"
+            name="panel"
+            value="D"
+            onchange="valueChanged(name)"
+            checked
+          />
+          <label for="panel-4">籠目</label>
+          <input
+            id="panel-5"
+            type="radio"
+            name="panel"
+            value="E"
+            onchange="valueChanged(name)"
+            checked
+          />
+          <label for="panel-e">竜胆</label>
+          <input
+            id="panel-6"
+            type="radio"
+            name="panel"
+            value="F"
+            onchange="valueChanged(name)"
+            checked
+          />
+          <label for="panel-6">桜</label>
+          <input
+            id="panel-7"
+            type="radio"
+            name="panel"
+            value="G"
+            onchange="valueChanged(name)"
+            checked
+          />
+          <label for="panel-7">帝つなぎ</label>
+          <input
+            id="panel-8"
+            type="radio"
+            name="panel"
+            value="H"
+            onchange="valueChanged(name)"
+            checked
+          />
+          <label for="panel-8">三重菱</label>
+          <input
+            id="panel-9"
+            type="radio"
+            name="panel"
+            value="I"
+            onchange="valueChanged(name)"
+            checked
+          />
+          <label for="panel-9">三つ組手</label>
+          <input
+            id="panel-10"
+            type="radio"
+            name="panel"
+            value="J"
+            onchange="valueChanged(name)"
+            checked
+          />
+          <label for="panel-10">七宝</label>
         </div>
         <div class="panel-btn-container">
           <h2>パネルの色</h2>
@@ -106,16 +180,16 @@
 <script>
   const image = document.getElementById("table-image");
   let thicknessBtn = document.getElementsByName("thickness");
-  let finenessBtn = document.getElementsByName("fineness");
+  let panelBtn = document.getElementsByName("panel")
   let colorBtn = document.getElementsByName("color");
   let lightBtn = document.getElementsByName("light");
 
   let thicknessValue = "250";
-  let finenessValue = "R";
+  let panelValue ="A"
   let colorValue = "BL";
   let lightValue = "off";
 
-  let url = "imgs/250-R-BL_off.jpg";
+  let url = "imgs/MWL-W250-A-BL_off.jpg";
 
   function valueChanged(name) {
     searchedProperty = document.getElementsByName(name);
@@ -125,8 +199,8 @@
           case "thickness":
             thicknessValue = searchedProperty.item(i).value;
             break;
-          case "fineness":
-            finenessValue = searchedProperty.item(i).value;
+          case "panel":
+            panelValue = searchedProperty.item(i).value;
             break;
           case "color":
             colorValue = searchedProperty.item(i).value;
@@ -135,16 +209,16 @@
             lightValue = searchedProperty.item(i).value;
             break;
           default:
-            console.log("ouch!");
+            console.log("ouch! you have something mistake in the script XD ");
             break;
         }
       }
     }
     url =
-      "imgs/" +
+      "imgs/MWL-W" +
       thicknessValue +
       "-" +
-      finenessValue +
+      panelValue +
       "-" +
       colorValue +
       "_" +
